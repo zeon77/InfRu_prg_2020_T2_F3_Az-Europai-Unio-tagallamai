@@ -24,6 +24,10 @@ namespace EU
             //5. feladat
             Console.WriteLine($"5. feladat: Magyarország csatlakozásának dátuma: " +
                 $"{tagállamok.Single(x => x.Név == "Magyarország").CsatlakozásDátuma.ToString("yyyy.MM.dd")}");
+
+            //6. feladat
+            bool volt = tagállamok.Any(x => x.CsatlakozásDátuma.Month == 5);
+            Console.WriteLine($"6. feladat: Májusban {(volt ? "volt" : "nem volt")} csatlakozás");
         }
     }
 }
