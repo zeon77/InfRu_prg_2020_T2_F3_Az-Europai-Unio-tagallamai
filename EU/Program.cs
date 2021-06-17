@@ -15,6 +15,8 @@ namespace EU
             foreach (var sor in File.ReadAllLines("EUcsatlakozas.txt", Encoding.UTF8))
                 tagállamok.Add(new Tagállam(sor));
 
+            //3. feladat
+            Console.WriteLine($"3. feladat: Az EU tagállamainak száma: {tagállamok.Count} db");
         }
     }
 }
