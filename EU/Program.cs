@@ -31,6 +31,14 @@ namespace EU
 
             //7. feladat
             Console.WriteLine($"7. feladat: Legutoljára csatlakozott ország: {tagállamok.OrderBy(x => x.CsatlakozásDátuma).Last().Név}");
+
+            //8. feladat
+            Console.WriteLine($"8. feladat: Statisztika");
+            tagállamok
+                .GroupBy(x => x.CsatlakozásDátuma.Year)
+                .Select(group => new { Ország = group.Key, Darab = group.Count() })
+                .ToList()
+                .ForEach(x => Console.WriteLine($"\t {x.Ország} - {x.Darab} ország"));
         }
     }
 }
