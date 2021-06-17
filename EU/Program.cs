@@ -28,6 +28,9 @@ namespace EU
             //6. feladat
             bool volt = tagállamok.Any(x => x.CsatlakozásDátuma.Month == 5);
             Console.WriteLine($"6. feladat: Májusban {(volt ? "volt" : "nem volt")} csatlakozás");
+
+            //7. feladat
+            Console.WriteLine($"7. feladat: Legutoljára csatlakozott ország: {tagállamok.OrderBy(x => x.CsatlakozásDátuma).Last().Név}");
         }
     }
 }
